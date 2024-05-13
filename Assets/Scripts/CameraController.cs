@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Camera camera;
-    public Transform chracterPos;
+    public Transform characterPos;
     public Vector3 offset = new Vector3(0, 0, -10);
 
     private void Awake()
@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 newPosition = chracterPos.position + offset;
+        Vector3 newPosition = characterPos.position + offset;
         camera.transform.position = newPosition;
     }
 }
