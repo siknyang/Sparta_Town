@@ -7,14 +7,15 @@ using UnityEngine.UI;
 
 public class JoinButton : MonoBehaviour
 {
-    public Text text;
-    public Text inputName;
+    
+    public InputField inputName;
 
     public void StartGame() // Todo: 입력 길이가 9로 고정되는 버그 수정
     {
         Debug.Log("입력 길이: " + inputName.text.Length);
         if (inputName.text.Length >= 2 && inputName.text.Length <= 10)
         {
+            GameManager.Instance.InputName(inputName.text);
             SceneManager.LoadScene("MainScene");
         }
         else
